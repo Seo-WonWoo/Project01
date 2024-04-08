@@ -1,5 +1,8 @@
 // header.js
 
+
+// 서브메뉴 동작
+
 document.querySelector('.menu1').addEventListener('mouseover', () => {
     document.querySelector('.nav-sub').classList.add('nav-sub-show');
     document.querySelector('.sub-box1').classList.add('sub-box-show');
