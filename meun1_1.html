@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup.html</title>
+    <title>main.html</title>
     <link rel="stylesheet" href="./css/main/header.css">
-    <link rel="stylesheet" href="./css/login/signup.css">
+    <link rel="stylesheet" href="./css/menu1/menu1.css">
     <link rel="stylesheet" href="./css/main/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,27 +80,76 @@
     </header>
     <main>
         <div class="container">
-            <form action="./main.html" class="signup-form">
-                <h2>회원가입</h2>
-                <div class="signup-box">
-                    <h3>아이디</h3>
-                    <input type="text" id="input-id" placeholder="아이디를 입력해주세요">
-                    <h3>패스워드(비밀번호)</h3>
-                    <input type="password" id="input-password" placeholder="비밀번호를 입력해주세요">
+            <div class="sidebar">
+                <div class="sidebar-name">
+                    <h2>시설현황</h2>
                 </div>
-                <div class="signup-box">
-                    <h3>성명(이름)</h3>
-                    <input type="text" id="input-name" placeholder="이름을 입력해주세요">
-                    <h3>주민번호</h3>
-                    <input type="password" id="input-securitynumber" placeholder="주민번호 앞자리(6자)를 입력해주세요">
-                    <h3>전화번호</h3>
-                    <input type="text" id="input-phonenumber" placeholder="전화번호(숫자만)를 입력해주세요">
-                    <h3>주소</h3>
-                    <input type="text" id="input-address" placeholder="주소를 입력해주세요">
+                <ul>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-1 side-show-s">축구장
+                            <img class="menu1-1-img img-show-s" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-2">축구장(인조잔디)
+                        <img class="menu1-2-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-3">다목적구장
+                            <img class="menu1-3-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-4">농구장
+                            <img class="menu1-4-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-5">체력단력장
+                            <img class="menu1-5-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-6">X-Game장
+                            <img class="menu1-6-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-7">지압보드
+                            <img class="menu1-7-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1-8">야외무대
+                            <img class="menu1-8-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                    <a href="./meun1_1.html">
+                        <li class="menu1 menu1-9">조경시설
+                            <img class="menu1-9-img" src="./img/right.png" alt="오른방향 화살표">
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content-name">
+                    <h2>축구장(천연잔디)</h2>
+                    <ul id="home-icon">
+                        <li><img src="./img/home.png" alt="mainpage"></li>
+                        <li> > </li>
+                        <li>시설현황</li>
+                        <li> > </li>
+                        <li>축구장</li>
+                    </ul>
                 </div>
-                <button type="submit" id="signup-submit">제출</button>
-            </form>
-            
+                <div class="content-text">
+                    dddㅇㄻㄴㄹㄴㅁㄹ
+                </div>
+                <div class="survey">
+                    설문조사
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -127,7 +176,7 @@
     </footer>
 
     <script src="./js/main/header.js"></script>
-    <script src="./js/login/signup.js"></script>
+    <script src="./js/menu/menu_sidebar.js"></script>
 </body>
 
 </html>
