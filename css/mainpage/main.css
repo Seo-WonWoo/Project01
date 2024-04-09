@@ -127,7 +127,7 @@ main .container {
 
     100% {
         transform: translateX(-2000px);
-        animation-timing-function: step-end;
+        /* animation-timing-function: step-end; */
     }
 
 }

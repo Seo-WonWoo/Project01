@@ -27,3 +27,8 @@
 .nav-sub li{
     color: rgb(80, 80, 0);
 }
+
+.login h3:link, .login h3:visited{
+    text-decoration: none;
+    color: black;
+}

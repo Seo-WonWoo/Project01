@@ -1,0 +1,96 @@
+/* sign up.css */
+
+main {
+    position: relative;
+    width: 100%;
+    height: 838px;
+    margin-top: 136px;
+    background: url('../../img/main_bg.jpg') repeat -330px 0 scroll;
+}
+
+main .container {
+    position: relative;
+    top: 100px;
+    padding: 30px;
+    width: 800px;
+    height: 600px;
+    z-index: 0.3;
+    background-color: white;    
+    border-radius: 20px;    
+}
+
+.container form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main .signup-box{
+    position: relative;    
+    padding: 0 20px 0 20px;
+    width: 350px;
+    height: 400px;
+    z-index: 0.3;
+    background-color: white;    
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.signup-form h2{
+    margin-bottom: 10px;
+    width: 740px;
+    text-align: center;
+}
+
+.signup-form h3{
+    margin: 0 0 5px 5px;
+}
+
+.signup-form #input-id, .signup-form #input-password, .signup-form #input-name,
+.signup-form #input-securitynumber, .signup-form #input-phonenumber,
+.signup-form #input-address{
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border:2px solid rgb(220,237,243);
+    border-collapse: collapse;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+input {
+    /* font-size: 1.1rem; */
+}
+
+input::placeholder{
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#id-recheck{
+    width: 20px;
+    height: 20px;
+}
+
+label{
+    position: relative;
+    margin-left: 5px;    
+    font-size: 1.1rem;
+    top: -4px;
+}
+
+.signup-form button{    
+    width: 300px;
+    height: 50px;
+    margin-left: 30px;
+    border:2px solid rgb(220,237,243);
+    border-collapse: collapse;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+input:focus {
+    background-color: rgba(220, 237, 243, 0.3);
+}
