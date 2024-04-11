@@ -106,13 +106,13 @@ header .nav-sub{
 }
 
 header .nav-sub-show{
-    height: 210px;
+    height: 320px;
 }
 
 .sub-box1, .sub-box2, .sub-box3, .sub-box4, .sub-box5{
     display: inline-block;
     width: 180px;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -125,7 +125,7 @@ header .nav-sub-show{
 
 .nav-sub li{
     list-style-type: none;
-    padding: 10px 0 10px 40px;
+    padding: 5px 0 5px 40px;
 }
 
 .nav-sub li:hover{

@@ -6,10 +6,15 @@
     font-style: normal;
 }
 
+
 .logo-text h2{
     font-weight: 700;
 }
 
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
 
 .notice li, .facility P, .location P{
     color: rgb(80, 80, 0);
@@ -26,9 +31,4 @@
 
 .nav-sub li{
     color: rgb(80, 80, 0);
-}
-
-.login h3:link, .login h3:visited{
-    text-decoration: none;
-    color: black;
 }
