@@ -145,29 +145,14 @@
         <div class="container">
             <div class="sidebar">
                 <div class="sidebar-name">
-                    <h2>공원안내</h2>
+                    <h2>통합예약</h2>
                 </div>
                 <ul>
-                    <a href="./meun5_1.html">
-                        <li class="menu5-1">연혁
-                            <img class="menu5-1-img" src="./img/right.png" alt="오른방향 화살표">
+                    <a href="./meun3_1.html">
+                        <li class="menu1-1 side-show-s">통합예약
+                            <img class="menu1-1-img img-show-s" src="./img/right.png" alt="오른방향 화살표">
                         </li>
-                    </a>
-                    <a href="./meun5_2.html">
-                        <li class="menu5-2">인사말
-                            <img class="menu5-2-img" src="./img/right.png" alt="오른방향 화살표">
-                        </li>
-                    </a>
-                    <a href="./meun5_3.html">
-                        <li class="menu5-3">공원안내도
-                            <img class="menu5-3-img" src="./img/right.png" alt="오른방향 화살표">
-                        </li>
-                    </a>
-                    <a href="./meun5_4.html">
-                        <li class="menu5-4 side-show-s">찾아오시는길
-                            <img class="menu5-4-img img-show-s" src="./img/right.png" alt="오른방향 화살표">
-                        </li>
-                    </a>
+                    </a>                    
                 </ul>
             </div>
             <div class="content">
@@ -178,63 +163,45 @@
                             <li><img src="./img/home.png" alt="mainpage"></li>
                         </a>
                         <li> > </li>
-                        <a href="./meun5_1.html">
-                            <li>공원안내</li>
+                        <a href="./meun3_1.html">
+                            <li>통합예약</li>
                         </a>
                         <li> > </li>
-                        <a href="./meun5_4.html">
-                            <li>찾아오시는길</li>
+                        <a href="./meun3_1.html">
+                            <li>통합예약</li>
                         </a>
                     </ul>
                 </div>
                 <div class="content-text">
                     <h3>생활체육공원 길찾기</h3>
 
-                    <!-- * 카카오맵 - 지도퍼가기 -->
-                    <div id="daumRoughmapContainer1712897130206" class="root_daum_roughmap root_daum_roughmap_landing">
-                    </div>
-                    <script charset="UTF-8" class="daum_roughmap_loader_script"
-                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <table id="calendar">
+                        <tr>
+                            <td>
+                            <a id="before" href="script:beforem()"></a>
+                            </td>
+                            <td colspan="4">
+                            <div id="yearmonth"></div>
+                            </td>
+                            <td>
+                            <a id="next" href="javascript:nextm()"></a>
+                            </td>
+                            <td>
+                            <a href="javascript:thisMonth()">오늘</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="14%"> 월 </td>
+                            <td width="14%"> 화 </td>
+                            <td width="14%"> 수 </td>
+                            <td width="14%"> 목 </td>
+                            <td width="14%"> 금 </td>
+                            <td width="14%"> 토 </td>
+                            <td width="14%"> 일 </td>
+                        </tr>
+                    </table>
 
-
-                    <script charset="UTF-8">
-                        new daum.roughmap.Lander({
-                            "timestamp": "1712897130206",
-                            "key": "2iwr6",
-                            "mapWidth": "640",
-                            "mapHeight": "360"
-                        }).render();
-                    </script>
-
-                    <h3>천안버스터미널 출발 - 천안생활체육공원도</h3>
-                    <ul>
-                        <li>총거리 : 4.93km</li>
-                        <li>소요시간 : 약16분</li>
-                        <li>교통비 : 택시비 약4,400원</li>
-                        <li>대중교통 : 12(부영아파트행), 710(광정행), 391(석천이행), 70(구룡동행), 24(동우아파트행)번 버스이용</li>
-                    </ul>
-
-                    <h3>천안역출발 - 천안생활체육공원도착</h3>
-                    <ul>
-                        <li>총거리 : 4.12km</li>
-                        <li>소요시간 : 약15분</li>
-                        <li>교통비 : 택시비 약3,800원</li>
-                        <li>대중교통 : 391(석천이행), 660(신덕리행), 70(구룡동행), 310(한국가스안전교육원행)번 버스이용</li>
-                    </ul>
-                    <h3>KTX천안아산역 출발 - 천안생활체육공원도착</h3>
-                    <ul>
-                        <li>총거리 : 7.17km</li>
-                        <li>소요시간 : 약11분</li>
-                        <li>교통비 : 택시비 약5,900원</li>
-                        <li>대중교통 : 지하철 1호선(아산)→(천안역)이동 후 390(석천리행), 660(신덕리행), 24(동우아파트행)번 버스이용</li>
-                    </ul>
-                    <h3>천안IC 출발 - 천안생활체육공원도착</h3>
-                    <ul>
-                        <li>총거리 : 5.64km</li>
-                        <li>소요시간 : 약13분</li>
-                        <li>교통비 : 택시비 약4,900원</li>
-                        <li>대중교통 : 710(광정행), 700(전의읍내리행), 70(구룡동행), 24(동우아파트행)번 버스이용</li>
-                    </ul>
+                    
                 </div>
                 <div class="survey">
                     <div class="survey-box">
@@ -293,7 +260,8 @@
     </footer>
 
     <script src="./js/main/header.js"></script>
-    <script src="./js/menu/menu_sidebar_5.js"></script>
+    <script src="./js/menu/menu_sidebar_3.js"></script>
+    <script src="./js/menu/calender.js"></script>
 </body>
 
 </html>

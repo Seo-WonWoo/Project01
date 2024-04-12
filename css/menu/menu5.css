@@ -181,14 +181,14 @@ dl dd{
     top: 2px;
 }
 
-.content-text h3 {
-    font-size: 1.1rem;
+.content-text h2 {
+    font-size: 1.2rem;
     margin-top: 20px;
     line-height: 40px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.content-text h3 span{
+.content-text h2 span{
     color: #FF6969;
 }
 
@@ -230,6 +230,7 @@ dl dd{
     text-align: end;
     color: black;
     margin-top: 10px;
+    font-weight: 500;
 }
 
 
