@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main.html</title>
     <link rel="stylesheet" href="./css/main/header.css">
-    <link rel="stylesheet" href="./css/menu/menu5.css">
+    <link rel="stylesheet" href="./css/menu/menu3.css">
     <link rel="stylesheet" href="./css/main/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,15 +149,15 @@
                 </div>
                 <ul>
                     <a href="./meun3_1.html">
-                        <li class="menu1-1 side-show-s">통합예약
-                            <img class="menu1-1-img img-show-s" src="./img/right.png" alt="오른방향 화살표">
+                        <li class="menu3-1 side-show-s">통합예약
+                            <img class="menu3-1-img img-show-s" src="./img/right.png" alt="오른방향 화살표">
                         </li>
-                    </a>                    
+                    </a>
                 </ul>
             </div>
             <div class="content">
                 <div class="content-name">
-                    <h2>찾아오시는길</h2>
+                    <h2>통합예약</h2>
                     <ul>
                         <a href="./main.html">
                             <li><img src="./img/home.png" alt="mainpage"></li>
@@ -173,35 +173,63 @@
                     </ul>
                 </div>
                 <div class="content-text">
-                    <h3>생활체육공원 길찾기</h3>
+                    <div class="sec_cal">
+                        <div class="cal_nav">
+                            <div class="nav-btn go-prev"></div>
+                            <div class="year-month"></div>
+                            <div class="nav-btn go-next"></div>
+                        </div>
+                        <div class="cal_wrap">
+                            <div class="days">
+                                <div class="day">일</div>
+                                <div class="day">월</div>
+                                <div class="day">화</div>
+                                <div class="day">수</div>
+                                <div class="day">목</div>
+                                <div class="day">금</div>
+                                <div class="day">토</div>                                
+                            </div>
+                            <div class="dates"></div>
+                        </div>
+                    </div>
 
-                    <table id="calendar">
-                        <tr>
-                            <td>
-                            <a id="before" href="script:beforem()"></a>
-                            </td>
-                            <td colspan="4">
-                            <div id="yearmonth"></div>
-                            </td>
-                            <td>
-                            <a id="next" href="javascript:nextm()"></a>
-                            </td>
-                            <td>
-                            <a href="javascript:thisMonth()">오늘</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="14%"> 월 </td>
-                            <td width="14%"> 화 </td>
-                            <td width="14%"> 수 </td>
-                            <td width="14%"> 목 </td>
-                            <td width="14%"> 금 </td>
-                            <td width="14%"> 토 </td>
-                            <td width="14%"> 일 </td>
-                        </tr>
-                    </table>
+                    <div class="reserve-input">
+                        <form action="">
+                            <h3>예약 접수</h3>
+                            <h4>예약 날짜</h4>
+                            <h5 class="text-blue">※ 좌측 예약달력표 해당부분 클릭해주세요</h5>                            
+                            <input id="reserved_day" type="date" value=""><br><br>
+                            <h4>예약 장소</h4>
+                            <div class="place-time"></div>
+                            <select name="time" id="reserved_place" size="1">
+                                <option value="">예약장소 선택</option>
+                                <option value="a">축구장(천연잔디)</option>
+                                <option value="b">축구장(인조잔디)</option>
+                                <option value="c">다목적구장</option>
+                                <option value="c">농구장</option>
+                            </select><br>
+                            <div class="place-information">
+                            </div><br>
 
-                    
+                            <h4>예약 시간</h4>
+                            <select name="time" id="reserved_time" size="1">
+                            </select><br>
+
+                            <h4>예상 비용</h4><br><br>
+                            <div class="place-cost"></div>
+
+                            <!-- <h4>요청 사항</h4>
+                            <input id="inputtext" type="text"> -->
+
+                            <button type="submit">신청 접수</button>
+
+                        </form>
+                    </div>
+                    <div class="content-compliance">
+dddd
+                        
+                    </div>
+
                 </div>
                 <div class="survey">
                     <div class="survey-box">
