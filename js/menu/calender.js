@@ -221,18 +221,18 @@ document.querySelector('#reserved_time').addEventListener('click', function(){
 
     if(reservedPlace === 'a'){ // 축구장(천연잔디)
         if(reservedDay_g === '0' || reservedDay_g === '6'){ // 일요일/토요일
-            if(reservedTime === '4'){ // 야간시간
+            if(reservedTime === '3'){ // 야간시간
                 fee = 675000;
                 submitCheck = true;             
-            } else if(reservedTime === '1' || reservedTime === '2' || reservedTime === '3'){ // 조조/주간시간
+            } else if(reservedTime === '0' || reservedTime === '1' || reservedTime === '2'){ // 조조/주간시간
                 fee = 360000;
                 submitCheck = true;
             }            
         } else{ // 평일
-            if(reservedTime === '4'){ // 야간시간
+            if(reservedTime === '3'){ // 야간시간
                 fee = 450000;
                 submitCheck = true;
-            } else if(reservedTime === '1' || reservedTime === '2' || reservedTime === '3'){ // 조조/주간시간
+            } else if(reservedTime === '0' || reservedTime === '1' || reservedTime === '2'){ // 조조/주간시간
                 fee = 300000;
                 submitCheck = true;
             }            
@@ -242,24 +242,24 @@ document.querySelector('#reserved_time').addEventListener('click', function(){
     }
     if(reservedPlace === 'b'){ // 축구장(인조잔디)
         if(reservedDay_g === '0' || reservedDay_g === '6'){ // 일요일/토요일
-            if(reservedTime === '1'){ // 조조시간  
+            if(reservedTime === '0'){ // 조조시간  
                 fee = 112500;
                 submitCheck = true;
-            } else if(reservedTime === '4'){ // 야간시간
+            } else if(reservedTime === '3'){ // 야간시간
                 fee = 337500;
                 submitCheck = true;
-            } else if(reservedTime === '2' || reservedTime === '3'){ // 주간시간
+            } else if(reservedTime === '1' || reservedTime === '2'){ // 주간시간
                 fee = 225000;
                 submitCheck = true;
             }            
         } else { // 평일
-            if(reservedTime === '1'){ // 조조시간  
+            if(reservedTime === '0'){ // 조조시간  
                 fee = 75000;
                 submitCheck = true;
-            } else if(reservedTime === '4'){ // 야간시간
+            } else if(reservedTime === '3'){ // 야간시간
                 fee = 225000;
                 submitCheck = true;
-            } else if(reservedTime === '2' || reservedTime === '3'){ // 주간시간
+            } else if(reservedTime === '1' || reservedTime === '2'){ // 주간시간
                 fee = 150000;
                 submitCheck = true;
             }            
