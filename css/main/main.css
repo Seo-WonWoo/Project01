@@ -145,12 +145,14 @@ main .container {
     border-radius: 20px;
 }
 
-.notice h2 {
-    margin: 0 0 5px 20px;
+.notice h2, .quickSurvice h2, .facility h2, .location h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 15px 15px;
 }
 
-.notice li {
-    padding: 5px 10px;
+.notice li, .quickSurvice li {
+    padding: 3px 5px 3px 10px;
     list-style-type: none;
     white-space: nowrap;
     /* 한줄 표기 */
@@ -158,11 +160,13 @@ main .container {
     /*  */
     text-overflow: ellipsis;
     /* 말줄임표 ... 함수 */
+    font-size: 0.95rem;
 }
 
 .quickSurvice {
     position: absolute;
     margin: 1rem;
+    padding: 10px 0 10px 5px;
     left: 920px;
     top: 390px;
     z-index: 0.5;
@@ -170,7 +174,25 @@ main .container {
     height: 190px;
     background: url('../../img/quickSurvice.jpg') scroll;
     border-radius: 20px;
+    color: white;
 }
+
+.quickSurvice li{
+    width: 120px;
+    height: 30px;
+    margin: 10px 0 10px 10px;    
+    background-color: rgba(79, 120, 14, 0.5);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.quickSurvice img{
+    width: 28px;
+    height: 28px;    
+}
+
 
 .reservation {
     position: absolute;
@@ -194,7 +216,7 @@ main .container {
     height: 90px;
     background: url('../../img/facility.jpg') scroll;
     border-radius: 20px;
-    padding-left: 20px;
+    padding: 10px 0 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -212,7 +234,7 @@ main .container {
     height: 90px;
     background: url('../../img/location.jpg') scroll;
     border-radius: 20px;
-    padding-left: 20px;
+    padding: 10px 0 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

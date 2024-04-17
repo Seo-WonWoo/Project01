@@ -92,7 +92,7 @@ let place_d_time = [`조조시간(5:00 ~ 7:00)`, `조조시간(7:00 ~ 9:00)`, `�
 // 예약장소 선택
 document.querySelector('#reserved_place').addEventListener('click', function(){
     if(this.value == 'a'){ // 축구장(천연잔디)
-        let str = `<option value="">예약시간 선택</option>`; 
+        let str = `<option value="" selected>예약시간 선택</option>`; 
         // 예약장소별 예약시간대 셀렉터 옵션내용 추가
         place_a_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
@@ -121,7 +121,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 공원을 이용하는 분들이 쾌적한 환경에서 즐거운 시간을 가질 수 있도록 협조하여 주시기 바랍니다.</h4>`;
     }
     if(this.value == 'b'){ // 축구장(인조잔디)
-        let str = `<option value="">예약시간 선택</option>`;         
+        let str = `<option value="" selected>예약시간 선택</option>`;         
         place_b_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -151,7 +151,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 공원을 이용하는 분들이 쾌적한 환경에서 즐거운 시간을 가질 수 있도록 협조하여 주시기 바랍니다.</h4>`;
     }
     if(this.value == 'c'){ // 다목적 구장
-        let str = `<option value="">예약시간 선택</option>`; 
+        let str = `<option value="" selected>예약시간 선택</option>`; 
         place_c_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -177,7 +177,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 위 사항을 위반시 퇴장 조치 및 이후 사용을 제한 할 수 있습니다</h4>`;
     }
     if(this.value == 'd'){ // 농구장
-        let str = `<option value="">예약시간 선택</option>`; 
+        let str = `<option value="" selected>예약시간 선택</option>`; 
         place_c_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -270,16 +270,7 @@ document.querySelector('#reserved_time').addEventListener('click', function(){
     if(reservedPlace === 'c' || reservedPlace === 'd'){
         fee, tex, cost = null;
         submitCheck = true;        
-    }
-
-    
-    
-    // if(fee != 0){
-    //     tex = fee * 0.1;
-    //     cost = fee + tex;
-
-    // }
-
+    }    
 
     if(submitCheck == true && fee != null){
         document.querySelector('.place-cost').innerHTML =
