@@ -92,7 +92,7 @@ let place_d_time = [`조조시간(5:00 ~ 7:00)`, `조조시간(7:00 ~ 9:00)`, `�
 // 예약장소 선택
 document.querySelector('#reserved_place').addEventListener('click', function(){
     if(this.value == 'a'){ // 축구장(천연잔디)
-        let str = "";
+        let str = `<option value="">예약시간 선택</option>`; 
         // 예약장소별 예약시간대 셀렉터 옵션내용 추가
         place_a_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
@@ -121,7 +121,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 공원을 이용하는 분들이 쾌적한 환경에서 즐거운 시간을 가질 수 있도록 협조하여 주시기 바랍니다.</h4>`;
     }
     if(this.value == 'b'){ // 축구장(인조잔디)
-        let str = "";
+        let str = `<option value="">예약시간 선택</option>`;         
         place_b_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -151,7 +151,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 공원을 이용하는 분들이 쾌적한 환경에서 즐거운 시간을 가질 수 있도록 협조하여 주시기 바랍니다.</h4>`;
     }
     if(this.value == 'c'){ // 다목적 구장
-        let str = "";
+        let str = `<option value="">예약시간 선택</option>`; 
         place_c_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -177,7 +177,7 @@ document.querySelector('#reserved_place').addEventListener('click', function(){
         <h4>※ 위 사항을 위반시 퇴장 조치 및 이후 사용을 제한 할 수 있습니다</h4>`;
     }
     if(this.value == 'd'){ // 농구장
-        let str = "";
+        let str = `<option value="">예약시간 선택</option>`; 
         place_c_time.forEach(function(time, index){
             str += `<option value="` + index + `">` + time + `</option>`;            
         });
@@ -216,65 +216,79 @@ document.querySelector('#reserved_time').addEventListener('click', function(){
     let reservedPlace = document.querySelector('#reserved_place').value;
     let reservedTime = document.querySelector('#reserved_time').value;
 
-    let fee, tex, cost = 0;
+    let fee, tex, cost;
     let submitCheck = false;
 
     if(reservedPlace === 'a'){ // 축구장(천연잔디)
         if(reservedDay_g === '0' || reservedDay_g === '6'){ // 일요일/토요일
-            if(reservedTime === '3'){ // 야간시간
+            if(reservedTime === '4'){ // 야간시간
                 fee = 675000;
                 submitCheck = true;             
-            } else{ // 조조/주간시간
+            } else if(reservedTime === '1' || reservedTime === '2' || reservedTime === '3'){ // 조조/주간시간
                 fee = 360000;
                 submitCheck = true;
             }            
         } else{ // 평일
-            if(reservedTime === '3'){ // 야간시간
+            if(reservedTime === '4'){ // 야간시간
                 fee = 450000;
                 submitCheck = true;
-            } else{ // 조조/주간시간
+            } else if(reservedTime === '1' || reservedTime === '2' || reservedTime === '3'){ // 조조/주간시간
                 fee = 300000;
                 submitCheck = true;
             }            
         }
+        tex = fee * 0.1;
+        cost = fee + tex;
     }
-    else if(reservedPlace === 'b'){ // 축구장(인조잔디)
+    if(reservedPlace === 'b'){ // 축구장(인조잔디)
         if(reservedDay_g === '0' || reservedDay_g === '6'){ // 일요일/토요일
-            if(reservedTime === '0'){ // 조조시간  
+            if(reservedTime === '1'){ // 조조시간  
                 fee = 112500;
                 submitCheck = true;
-            } else if(reservedTime === '3'){ // 야간시간
+            } else if(reservedTime === '4'){ // 야간시간
                 fee = 337500;
                 submitCheck = true;
-            } else{ // 주간시간
+            } else if(reservedTime === '2' || reservedTime === '3'){ // 주간시간
                 fee = 225000;
                 submitCheck = true;
             }            
-        } else{ // 평일
-            if(reservedTime === '0'){ // 조조시간  
+        } else { // 평일
+            if(reservedTime === '1'){ // 조조시간  
                 fee = 75000;
                 submitCheck = true;
-            } else if(reservedTime === '3'){ // 야간시간
+            } else if(reservedTime === '4'){ // 야간시간
                 fee = 225000;
                 submitCheck = true;
-            } else{ // 주간시간
+            } else if(reservedTime === '2' || reservedTime === '3'){ // 주간시간
                 fee = 150000;
                 submitCheck = true;
             }            
-        }    
+        }
+        tex = fee * 0.1;
+        cost = fee + tex;
     }
-    else if(reservedPlace === 'c' ||reservedPlace === 'd'){
-        submitCheck = true;
+    if(reservedPlace === 'c' || reservedPlace === 'd'){
+        fee, tex, cost = null;
+        submitCheck = true;        
     }
 
-    tex = fee * 0.1;
-    cost = fee + tex;
+    
+    
+    // if(fee != 0){
+    //     tex = fee * 0.1;
+    //     cost = fee + tex;
 
-    if(submitCheck == true){
+    // }
+
+
+    if(submitCheck == true && fee != null){
         document.querySelector('.place-cost').innerHTML =
         `<h4>` + cost.toLocaleString('ko-KR') + `원(VAT포함, 할인제외)</h4>`
         + `<h5> 기본요금 : ` + fee.toLocaleString('ko-KR') + `원</h5>`
         + `<h5> 세금(VAT) : ` + tex.toLocaleString('ko-KR') + `원</h5>`;
-    }
+    } else if(submitCheck == true && fee == null){
+        document.querySelector('.place-cost').innerHTML =
+        `<h4>무 료</h4>`;
+    } 
 
 });

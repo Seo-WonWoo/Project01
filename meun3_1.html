@@ -198,25 +198,28 @@
                             <h3>예약 접수</h3>
                             <h4>예약 날짜</h4>
                             <h5 class="text-blue">※ 좌측 예약달력표 해당부분 클릭해주세요</h5>                            
-                            <input id="reserved_day" type="date" value=""><br><br>
+                            <input id="reserved_day" type="date" value="" required><br><br>
                             <h4>예약 장소</h4>
                             <div class="place-time"></div>
-                            <select name="time" id="reserved_place" size="1">
+                            <select name="time" id="reserved_place" size="1" required>
                                 <option value="">예약장소 선택</option>
                                 <option value="a">축구장(천연잔디)</option>
                                 <option value="b">축구장(인조잔디)</option>
                                 <option value="c">다목적구장</option>
-                                <option value="c">농구장</option>
+                                <option value="d">농구장</option>
                             </select><br>
                             <div class="place-information">
                             </div><br>
 
                             <h4>예약 시간</h4>
-                            <select name="time" id="reserved_time" size="1">
+                            <select name="time" id="reserved_time" size="1" required>
+                                <option value="">예약시간 선택</option>
                             </select><br><br>
 
                             <h4>예상 비용</h4>
-                            <div class="place-cost"></div>
+                            <div class="place-cost">
+                                <h4>※ 예약날짜, 예약장소, 예약시간 입력해주세요</h4>
+                            </div>
 
                             <!-- <h4>요청 사항</h4>
                             <input id="inputtext" type="text"> -->
